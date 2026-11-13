@@ -1,0 +1,13 @@
+<div class="filtro">
+    @for (opcion of opciones; track opcion) {
+        <button
+            class="filtro__boton"
+            [class.filtro__boton--activo]="catalogo.categoria() === opcion"
+            (click)="catalogo.filtrar(opcion)"
+        >
+            {{ opcion }}
+        </button>
+    }
+
+
+</div>
